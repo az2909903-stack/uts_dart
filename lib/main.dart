@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'pages/order.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -92,7 +94,14 @@ class OnboardingPage extends StatelessWidget {
                   width: double.infinity,
                   height: 60,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const OrderPage(),
+                        ),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.deepOrange,
                       foregroundColor: Colors.white,
@@ -116,7 +125,14 @@ class OnboardingPage extends StatelessWidget {
 
                 // Tombol SKIP
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const OrderPage(),
+                      ),
+                    );
+                  },
                   child: Text(
                     'Skip',
                     style: TextStyle(
